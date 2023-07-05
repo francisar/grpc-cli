@@ -30,7 +30,7 @@ help: ## Display this help.
 .PHONY: build
 build: clean ## Build application binary.
 	@mkdir build
-	@GOOS=${BUILD_GOOS} ${GOBUILD} -ldflags ${BUILD_LD_FLAGS} -o build/grpc-kit-cli main.go
+	@GOOS=${BUILD_GOOS} ${GOBUILD} -ldflags ${BUILD_LD_FLAGS} -o build/grpc-cli main.go
 
 ##@ Clean
 

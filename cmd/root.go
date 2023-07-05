@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/grpc-kit/cli/config"
+	"github.com/francisar/grpc-cli/config"
 	homedir "github.com/mitchellh/go-homedir"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
@@ -29,9 +29,9 @@ var cfgType config.Config
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "grpc-kit-cli",
-	Short: "grpc-kit-cli is the main command, used to build your product easy.",
-	Long: `gRPC Kit Cli is used to quickly generate code templates for the same product
+	Use:   "grpc-cli",
+	Short: "grpc-cli is the main command, used to build your product easy.",
+	Long: `gRPC Cli is used to quickly generate code templates for the same product
 to comply with the same specifications.
 
 Complete documentation is available at https://grpc-kit.com/.

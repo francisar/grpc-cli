@@ -31,26 +31,12 @@ syntax = "proto3";
 package {{ .Global.ProductCode }}.{{ .Global.ShortName }}.{{ .Template.Service.APIVersion }};
 
 // 引入依赖的外部proto文件
-import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 import "github.com/grpc/grpc-proto/grpc/health/v1/health.proto";
 import "github.com/googleapis/googleapis/google/api/annotations.proto";
-import "github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger/options/annotations.proto";
+import "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/options/annotations.proto";
 
 // 同组RPC方法对应一个proto文件，以该组RPC名称的小写字母为文件名
 import "api/{{ .Global.ProductCode }}/{{ .Global.ShortName }}/{{ .Template.Service.APIVersion }}/demo.proto";
-
-// 结合本项目，推荐做以下设置
-option (gogoproto.marshaler_all) = true;
-option (gogoproto.sizer_all) = true;
-option (gogoproto.unmarshaler_all) = true;
-option (gogoproto.goproto_registration) = true;
-option (gogoproto.goproto_getters_all) = true;
-option (gogoproto.goproto_unrecognized_all) = false;
-option (gogoproto.goproto_unkeyed_all) = false;
-option (gogoproto.goproto_sizecache_all) = false;
-option (gogoproto.equal_all) = true;
-option (gogoproto.compare_all) = true;
-option (gogoproto.messagename_all) = false;
 
 // 转换为swagger接口文档的相关设置
 option (grpc.gateway.protoc_gen_swagger.options.openapiv2_swagger) = {
@@ -158,24 +144,11 @@ package {{ .Global.ProductCode }}.{{ .Global.ShortName }}.{{ .Template.Service.A
 import "google/protobuf/empty.proto";
 
 // 引入第三方依赖的proto文件
-import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 import "github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger/options/annotations.proto";
 
 // 引入项目通用的proto文件
 import "github.com/grpc-kit/api/proto/v1/example.proto";
 
-// 结合本项目，推荐做以下设置
-option (gogoproto.marshaler_all) = true;
-option (gogoproto.sizer_all) = true;
-option (gogoproto.unmarshaler_all) = true;
-option (gogoproto.goproto_registration) = true;
-option (gogoproto.goproto_getters_all) = true;
-option (gogoproto.goproto_unrecognized_all) = false;
-option (gogoproto.goproto_unkeyed_all) = false;
-option (gogoproto.goproto_sizecache_all) = false;
-option (gogoproto.equal_all) = true;
-option (gogoproto.compare_all) = true;
-option (gogoproto.messagename_all) = false;
 
 message DemoRequest {
     option (grpc.gateway.protoc_gen_swagger.options.openapiv2_schema) = {

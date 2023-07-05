@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"regexp"
 
-	"github.com/grpc-kit/cli/template"
+	"github.com/francisar/grpc-cli/template"
 	"github.com/grpc-kit/pkg/version"
 	"github.com/spf13/cobra"
 )

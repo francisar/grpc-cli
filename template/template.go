@@ -17,8 +17,8 @@ package template
 import (
 	"fmt"
 
-	"github.com/grpc-kit/cli/config"
-	"github.com/grpc-kit/cli/template/service"
+	"github.com/francisar/grpc-cli/config"
+	"github.com/francisar/grpc-cli/template/service"
 )
 
 const (

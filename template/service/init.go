@@ -19,7 +19,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/grpc-kit/cli/config"
+	"github.com/francisar/grpc-cli/config"
 	"github.com/grpc-kit/pkg/file"
 )
 

@@ -14,7 +14,7 @@
 
 package main
 
-import "github.com/grpc-kit/cli/cmd"
+import "github.com/francisar/grpc-cli/cmd"
 
 func main() {
 	cmd.Execute()
